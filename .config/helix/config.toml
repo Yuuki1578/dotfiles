@@ -1,0 +1,34 @@
+theme = "gruvbox"
+
+[editor]
+scrolloff = 20
+mouse = false
+scroll-lines = 20
+line-number = "relative"
+completion-timeout = 0
+completion-replace = true
+true-color = true
+bufferline = "multiple"
+color-modes = true
+
+[editor.statusline]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.indent-guides]
+render = true
+
+[keys.normal]
+esc = ["collapse_selection", "keep_primary_selection"]
+
+[keys.insert]
+C-space = "completion"
