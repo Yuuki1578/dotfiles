@@ -12,11 +12,11 @@ for many applications such as:
 
 ## Sample
   - **Neovim**
-		![[nvim_1.jpg]]
-		![[nvim_2.jpg]]
+		![nvim_1.jpg](./media/img/nvim_1.jpg)
+		![nvim_2.jpg](./media/img/nvim_2.jpg)
 	
 - **Helix**
-		![[helix.jpg]]
+		![helix.jpg](./media/img/helix.jpg)
 
 - **Starship**
-		![[starship.jpg]]
+		![starship.jpg](./media/img/starship.jpg)
