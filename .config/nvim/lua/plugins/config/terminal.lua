@@ -1,6 +1,6 @@
-require("toggleterm").setup{
+require("toggleterm").setup {
   size = 20,
-  oppen_mapping = [[<C-\>]],
+  open_mapping = [[<C-t>]],
   hide_numbers = true,
   shade_filetypes = {},
   shade_terminals = true,
@@ -21,7 +21,7 @@ require("toggleterm").setup{
   },
 }
 
-local horizontal_term = require("toggleterm.terminal").Terminal:new({hidden = true})
+local horizontal_term = require("toggleterm.terminal").Terminal:new( {hidden = true} )
 
 function horizontal_window()
   horizontal_term:toggle()

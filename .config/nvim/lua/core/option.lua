@@ -1,5 +1,5 @@
 -- Basic Appearance
-vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme tokyonight-night")
 vim.opt.termguicolors = true
 vim.opt.signcolumn = "yes"
 
@@ -11,12 +11,11 @@ vim.opt.wrap = false
 vim.opt.showmode = false
 vim.opt.showcmd = false
 vim.opt.ruler = false
-vim.opt.sidescrolloff = 20
-vim.opt.scrolloff = 20
+vim.opt.scrolloff = 15
+vim.opt.sidescrolloff = 10
 vim.opt.fillchars = 'eob: '
-vim.opt.shell = "/usr/bin/bash"
 
--- Tab
+-- Tab 
 vim.opt.autoindent = true
 vim.opt.smartindent = true
 vim.opt.shiftwidth = 2

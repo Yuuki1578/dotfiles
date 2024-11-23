@@ -1,18 +1,11 @@
 -- Leader key
 vim.g.mapleader = " "
 
--- Keymap option
-local silent = {silent = true}
-
 -- Nvim Tree file explorer
-vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", silent)
+vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", { silent = true } )
 
--- Fuzzy Finder
-vim.keymap.set("n", "<leader>ff", ":Telescope find_files<cr>", silent)
-vim.keymap.set("n", "<leader>fg", ":Telescope live_grep<cr>", silent)
-vim.keymap.set("n", "<leader>fs", ":Telescope grep_string<cr>", silent)
-vim.keymap.set("n", "<leader>fb", ":Telescope buffers<cr>", silent)
-vim.keymap.set("n", "<leader>fh", ":Telescope help_tags<cr>", silent)
+-- ToggleTerm
+vim.keymap.set("n", "<C-t>", ":lua horizontal_window()<cr>", { silent = true } )
 
 -- Highlight Toggle
 local nh = true
@@ -24,7 +17,7 @@ vim.keymap.set("n", "<leader>nh", function()
     vim.opt.hlsearch = true
     nh = true
   end
-end, silent)
+end, { silent = true } )
 
 -- Wrap toggle
 local nw = true
@@ -36,10 +29,4 @@ vim.keymap.set("n", "<leader>nw", function()
     vim.opt.wrap = false
     nw = true
   end
-end, silent)
-
--- Terminal
-vim.keymap.set("n", "<leader>t", ":lua horizontal_window()<cr>", silent)
-
--- Plugins
-vim.keymap.set("n", "<leader>L", ":Lazy<cr>", silent)
+end, { silent = true } )

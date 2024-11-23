@@ -12,30 +12,49 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true },
-  { "numToStr/Comment.nvim" },
-  { "nvim-lua/plenary.nvim" },
+
+  -- Appearance
+  { "folke/tokyonight.nvim", lazy = false, priority = 1000 },
+  { "lewis6991/gitsigns.nvim" },
+  { "akinsho/toggleterm.nvim" },
   { "nvim-tree/nvim-tree.lua" },
-  { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-  { "nvim-telescope/telescope.nvim", branch = "0.1.x" },
   { "kyazdani42/nvim-web-devicons" },
   { "nvim-lualine/lualine.nvim" },
+
+  -- Utilities
+  { "numToStr/Comment.nvim" },
   { "hrsh7th/nvim-cmp" },
   { "hrsh7th/cmp-buffer" },
   { "hrsh7th/cmp-path" },
   { "hrsh7th/cmp-nvim-lsp" },
   { "L3MON4D3/LuaSnip" },
   { "saadparwaiz1/cmp_luasnip" },
-  { "williamboman/mason.nvim" },
-  { "williamboman/mason-lspconfig.nvim" },
-  { "neovim/nvim-lspconfig" },
-  { "nvimdev/lspsaga.nvim", branch = "main" },
   { "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
   { "windwp/nvim-ts-autotag" },
   { "windwp/nvim-autopairs" },
-  { "lukas-reineke/indent-blankline.nvim", main = "ibl" },
-  { "lewis6991/gitsigns.nvim" },
-  { "akinsho/toggleterm.nvim" },
   { "onsails/lspkind.nvim" },
-  { "HiPhish/nvim-ts-rainbow2" },
+
+  -- Vim tmux navigator
+  {
+    "christoomey/vim-tmux-navigator",
+
+    cmd = {
+      "TmuxNavigateLeft",
+      "TmuxNavigateDown",
+      "TmuxNavigateUp",
+      "TmuxNavigateRight",
+      "TmuxNavigatePrevious",
+    },
+
+    keys = {
+      { "<c-h>", "<cmd><C-U>TmuxNavigateLeft<cr>" },
+      { "<c-j>", "<cmd><C-U>TmuxNavigateDown<cr>" },
+      { "<c-k>", "<cmd><C-U>TmuxNavigateUp<cr>" },
+      { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
+      { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
+    },
+  },
+
+  -- LSP
+  { "neovim/nvim-lspconfig" },
 })
