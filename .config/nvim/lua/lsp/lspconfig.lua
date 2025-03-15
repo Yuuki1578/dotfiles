@@ -3,6 +3,7 @@ local cmp_nvim_lsp = require("cmp_nvim_lsp")
 
 local on_attach = function(client, bufnr)
   local opts = { noremap = true, silent = true, buffer = bufnr }
+
   vim.keymap.set("n", "gD", ":lua vim.lsp.buf.declaration()<cr>", opts)
   vim.keymap.set("n", "gd", ":lua vim.lsp.buf.definition()<cr>", opts)
   vim.keymap.set("n", "gf", ":lua vim.diagnostic.open_float()<cr>", opts)

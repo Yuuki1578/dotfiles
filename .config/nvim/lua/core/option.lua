@@ -5,14 +5,14 @@ vim.opt.signcolumn = "yes"
 
 -- Editor Config
 vim.opt.syntax = "on"
-vim.opt.cursorline = false
 vim.opt.number = true
 vim.opt.wrap = false
 vim.opt.showmode = false
 vim.opt.showcmd = false
 vim.opt.ruler = false
+vim.opt.smoothscroll = true
 vim.opt.scrolloff = 15
-vim.opt.sidescrolloff = 10
+vim.opt.sidescrolloff = 15
 vim.opt.fillchars = 'eob: '
 
 -- Tab 
@@ -27,12 +27,11 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Backup File
-vim.opt.hidden = true
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
 
--- Disable intro messages
+-- Opening
 vim.cmd("set shortmess+=I")
 
 -- Backspace
