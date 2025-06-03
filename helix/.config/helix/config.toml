@@ -1,16 +1,15 @@
-theme = "kanagawa"
+theme = "tokyonight"
 
 [editor]
 scrolloff = 15
 mouse = false
 completion-timeout = 5
 preview-completion-insert = false
-completion-trigger-len = 1
 completion-replace = true
 true-color = true
 bufferline = "multiple"
 color-modes = true
-end-of-line-diagnostics = "hint"
+popup-border = "all"
 
 [editor.cursor-shape]
 normal = "block"
@@ -20,16 +19,14 @@ select = "underline"
 [editor.file-picker]
 hidden = false
 
-[editor.smart-tab]
-enable = false
-
 [editor.inline-diagnostics]
-cursor-line = "error"
+cursor-line = "hint"
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]
 a = ["append_mode", "collapse_selection"]
 i = ["insert_mode", "collapse_selection"]
+'=' = [":format"]
 
 [keys.insert]
 C-space = "completion"
