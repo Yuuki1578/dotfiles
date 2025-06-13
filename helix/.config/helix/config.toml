@@ -1,15 +1,15 @@
-theme = "tokyonight"
+theme = "kanagawa"
 
 [editor]
 scrolloff = 15
 mouse = false
+line-number = "relative"
 completion-timeout = 5
 preview-completion-insert = false
 completion-replace = true
 true-color = true
 bufferline = "multiple"
 color-modes = true
-popup-border = "all"
 
 [editor.cursor-shape]
 normal = "block"
@@ -21,6 +21,9 @@ hidden = false
 
 [editor.inline-diagnostics]
 cursor-line = "hint"
+
+[editor.smart-tab]
+enable = false
 
 [keys.normal]
 esc = ["collapse_selection", "keep_primary_selection"]

@@ -1,0 +1,13 @@
+# use-grammars = { only = ["c", "cpp", "toml"] }
+
+[language-server.clangd]
+command = "clangd"
+args = ["--fallback-style=webkit"]
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "    " }
+
+[[language]]
+name = "cpp"
+indent = { tab-width = 4, unit = "    " }
