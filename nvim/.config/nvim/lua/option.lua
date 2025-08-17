@@ -24,6 +24,7 @@ vim.opt.expandtab = true
 -- Searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+vim.opt.hlsearch = false
 
 -- Backup File
 vim.opt.swapfile = false
@@ -32,6 +33,9 @@ vim.opt.writebackup = false
 
 -- Opening
 vim.cmd("set shortmess+=I")
+
+-- Shell
+vim.opt.shell = "ash"
 
 -- Backspace
 vim.opt.backspace = "indent,eol,start"

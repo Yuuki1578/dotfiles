@@ -14,14 +14,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-    { "neovim/nvim-lspconfig", lazy = true },       -- Native LSP plugins
-    { "onsails/lspkind.nvim" },                     -- LSP symbols
     { "hrsh7th/nvim-cmp" },                         -- Completions
     { "hrsh7th/cmp-buffer" },                       -- Buffer completion
     { "hrsh7th/cmp-path" },                         -- Path completion
-    { "hrsh7th/cmp-nvim-lsp" },                     -- LSP completion
     { "saadparwaiz1/cmp_luasnip" },                 -- Snippet completion
     { "L3MON4D3/LuaSnip" },                         -- Snippet engines
+    { "rafamadriz/friendly-snippets" },
 
     {
         'stevearc/oil.nvim',
@@ -35,12 +33,13 @@ require("lazy").setup({
         end
     },
 
-    { -- Colorscheme
-        "ellisonleao/gruvbox.nvim", 
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
         priority = 1000,
         config = function()
-            vim.cmd("colorscheme gruvbox")
-        end 
+            vim.cmd("colorscheme tokyonight-night")
+        end,
     },
 
     { -- Gitsigns 
@@ -88,7 +87,11 @@ require("lazy").setup({
             require("nvim-treesitter.configs").setup({
                 highlight = { enable = true },
                 indent = { enable = true },
-                ensure_installed = {},
+                ensure_installed = {
+                    "lua",
+                    "c",
+                    "cpp",
+                },
             })
         end
     },
@@ -102,16 +105,6 @@ require("lazy").setup({
 
             autopairs.setup()
             cmp.event:on("confirm done", cmp_autopairs.on_confirm_done())
-        end
-    },
-
-    { -- Signature helper for LSP
-        "ray-x/lsp_signature.nvim",
-        event = "InsertEnter",
-        config = function()
-            require("lsp_signature").setup({
-                hint_enable = false
-            })
         end
     },
 })

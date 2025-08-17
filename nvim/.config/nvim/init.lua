@@ -7,6 +7,3 @@ require("keymap")
 
 -- User Plugins
 require("nvim-cmp")
-
--- LSP
-require("lsp-setup")
