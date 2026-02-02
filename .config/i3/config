@@ -196,6 +196,7 @@ bindsym $mod+r mode "resize"
 #         status_command i3status
 # }
 
-exec_always --no-startup-id feh --bg-fill /home/yuuki/download/images/arknights_children-day_2025.png
-exec_always --no-startup-id picom
-exec_always --no-startup-id /home/yuuki/.config/polybar/launch.sh
+exec_always --no-startup-id feh --no-feh --bg-fill ~/download/repo/dotfiles/assets/img/arknights_1.png
+exec_always --no-startup-id xcompmgr
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+exec_always --no-startup-id pulseaudio

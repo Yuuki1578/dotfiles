@@ -3,7 +3,7 @@ decorations = "None"
 opacity = 0.9
 
 [font]
-normal = { family = "Iosevka Nerd Font" }
+normal = { family = "CaskaydiaCove Nerd Font" }
 size = 17
 
 # -----------------------------------------------------------------------------
