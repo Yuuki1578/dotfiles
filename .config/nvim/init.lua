@@ -1,9 +1,15 @@
 -- Lazy Plugin Manager
-require("plugins")
+require("plugins.lazy")
 
 -- Core Utility
-require("option")
-require("keymap")
+require("core.option")
+require("core.keymap")
 
 -- User Plugins
-require("nvim-cmp")
+require("plugins.nvim-cmp")
+require("plugins.treesitter")
+require("plugins.lualine")
+require("plugins.indent-line")
+
+-- LSP
+require("plugins.lsp")
