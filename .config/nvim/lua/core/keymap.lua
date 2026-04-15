@@ -17,3 +17,4 @@ keymap.set("n", "<leader>e", ":NvimTreeToggle<cr>", attr)
 
 -- Fuzzy finder
 keymap.set("n", "<leader>f", ":Telescope fd<cr>", attr)
+keymap.set("n", "<leader>F", ":Telescope fd hidden=true<cr>", attr)

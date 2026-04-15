@@ -1,4 +1,4 @@
-require("nvim-treesitter.configs").setup({
+require("nvim-treesitter").setup({
     highlight = { enable = true },
     indent = { enable = true },
     ensure_installed = {
@@ -11,5 +11,6 @@ require("nvim-treesitter.configs").setup({
         "css",
         "javascript",
         "typescript",
+        "python",
     },
 })
